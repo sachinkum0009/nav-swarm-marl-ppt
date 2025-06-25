@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	<!-- Add logo at top left corner -->
+	<style>
+		.fhdo-logo {
+			position: fixed;
+			top: 20px;
+			left: 20px;
+			width: 300px;
+			height: auto;
+			z-index: 1000;
+		}
+
+		.presenter-name {
+			position: fixed;
+			bottom: 20px;
+			left: 30px;
+			color: #fff;
+			background: rgba(0, 0, 0, 0.5);
+			padding: 8px 18px;
+			border-radius: 8px;
+			font-size: 1.2em;
+			font-weight: 500;
+			z-index: 1000;
+			pointer-events: none;
+		}
+
+		.reveal .slide-number {
+			left: 50% !important;
+			right: auto !important;
+			transform: translateX(-50%) !important;
+			bottom: 8px;
+		}
+	</style>
+</head>
+
+<body>
+	<img src="assets/fhdo.jpg" alt="FHDO Logo" class="fhdo-logo" />
+	<div class="presenter-name">Presentator: Sachin Kumar</div>
+
+	<div class="reveal">
+		<div class="slides">
+			<section data-background-color="white">
+				<h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+					Nav Swarm MARL
+				</h3>
+				<p>
+					Multi-Agent Reinforcement Learning for Robotics Swarm Navigation with Sim2Real Transfer
+				</p>
+				<br>
+				<p style="font-weight: 200; font-size: large;">
+					Supervisor: Prof. Dr. Andreas Becker
+					<br>
+					Co-Supervisor: Tobias Uhlich
+				</p>
+
+			</section>
+			<section data-background-color="white">
+				<section>
+					<h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+						Motivation
+					</h3>
+				</section>
+				<section>
+					<h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+						Laziness
+					</h3>
+				</section>
+				<section>
+					<h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+						AI taking over the world 
+					</h3>
+				</section>
+			</section>
+			<section data-background-color="white">
+				<h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+					Introduction
+				</h3>
+			</section>
+			<section data-background-color="white">
+				<section>
+					<h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+						Implementation
+					</h3>
+				</section>
+				<section>
+					<figure style="margin: 0;">
+						<h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+							Training Robot
+						</h3>
+						<img src="assets/rl_training_implementation.png" width="70%" alt="RL Training for implementation" />
+						<figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+							Fig 1. RL Training for implementation
+						</figcaption>
+					</figure>
+				</section>
+			</section>
+			<section data-background-color="white">
+				<h3>Any Questions</h3>
+				<h4>?</h4>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			slideNumber: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
