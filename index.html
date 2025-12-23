@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>Master Thesis Presentation</title>
 
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
@@ -49,7 +49,7 @@
 </head>
 
 <body>
-	<img src="assets/fhdo.jpg" alt="FHDO Logo" class="fhdo-logo" />
+	<!-- <img src="assets/fhdo.jpg" alt="FHDO Logo" class="fhdo-logo" /> -->
 	<div class="presenter-name">Presentator: Sachin Kumar</div>
 
 	<div class="reveal">
@@ -70,6 +70,19 @@
 
 			</section>
 			<section data-background-color="white">
+				<h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+					Outline
+				</h3>
+				<ul style="list-style: none; padding: 0; line-height: 2.5;">
+					<li style="margin: 15px 0; padding: 12px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">📍 Motivation</li>
+					<li style="margin: 15px 0; padding: 12px 20px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 10px; color: white; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">📚 Introduction</li>
+					<li style="margin: 15px 0; padding: 12px 20px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 10px; color: white; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">⚙️ Implementation</li>
+					<li style="margin: 15px 0; padding: 12px 20px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); border-radius: 10px; color: white; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">📊 Results</li>
+					<li style="margin: 15px 0; padding: 12px 20px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-radius: 10px; color: white; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">🎯 Conclusion & Future Work</li>
+				</ul>
+				
+			</section>
+			<section data-background-color="white">
 				<section>
 					<h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
 						Motivation
@@ -87,9 +100,27 @@
 				</section>
 			</section>
 			<section data-background-color="white">
-				<h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
-					Introduction
-				</h3>
+				<section>
+					<h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+						Introduction
+					</h3>
+					<ul style="list-style: none; padding: 0; line-height: 2.5;">
+						<li style="margin: 15px 0; padding: 12px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">🤖 Reinforcement Learning Training</li>
+						<li style="margin: 15px 0; padding: 12px 20px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 10px; color: white; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">🌉 Sim2Real Transfer</li>
+						<li style="margin: 15px 0; padding: 12px 20px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 10px; color: white; font-size: 1.1em; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">🎯 Multi-Agent Reinforcement Learning</li>
+					</ul>
+				</section>
+				<section>
+					<figure style="margin: 0;">
+						<h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+							Reinforcement Learning Training
+						</h3>
+						<img src="assets/rl_agent_sys_arch.png" width="50%" alt="RL Training" />
+						<figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+							Fig 1. RL Training Architecture <a href="#/ref-smithetal2016" style="color:#667eea; text-decoration:none;">[1]</a>
+						</figcaption>
+					</figure>
+				</section>
 			</section>
 			<section data-background-color="white">
 				<section>
@@ -104,15 +135,40 @@
 						</h3>
 						<img src="assets/rl_training_implementation.png" width="70%" alt="RL Training for implementation" />
 						<figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
-							Fig 1. RL Training for implementation
+							Fig 2. RL Training for implementation
 						</figcaption>
 					</figure>
 				</section>
 			</section>
 			<section data-background-color="white">
+				<h3>Multi TB3 Real</h3>
+				<!--- add mp4 -->
+				<video width="70%" controls autoplay muted loop playbackRate="2.0">
+					<source src="assets/multi_tb3_real.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<script>
+					document.querySelector('video').playbackRate = 2.0;
+				</script>
+			</section>
+			<section data-background-color="white">
 				<h3>Any Questions</h3>
 				<h4>?</h4>
 			</section>
+			<section data-background-color="white">
+				<h3>References</h3>
+				<ol style="text-align: left; font-size: 0.8em;">
+					<li>OpenAI Gym: https://gym.openai.com/</li>
+					<li>Stable Baselines3: https://stable-baselines3.readthedocs.io/</li>
+					<li>ROS2: https://docs.ros.org/en/foxy/index.html</li>
+					<li>Gazebo Simulator: http://gazebosim.org/</li>
+					<li>PyTorch: https://pytorch.org/</li>
+					<li>NumPy: https://numpy.org/</li>
+					<li>Matplotlib: https://matplotlib.org/</li>
+				</ul>
+				<div id="ref-smithetal2016">
+					<p>Smith, Peter W., Beata Moskal, Ting Xu, Jungmin Kang, and Jonathan D. Bobaljik. 2019. “Case and Number Suppletion in Pronouns.” <em>Natural Language and Linguistic Theory</em> 37 (3): 1029–1101.</p>
+				</div>
 		</div>
 	</div>
 
