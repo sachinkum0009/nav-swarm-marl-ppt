@@ -1,0 +1,77 @@
+<section>
+    <h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+        Results
+    </h3>
+</section>
+
+<section>
+    <figure style="margin: 0;">
+        <h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+            Comparative analysis: PPO vs DDPG
+        </h3>
+        <img src="assets/ddpg_vs_ppo.png" width="70%" alt="Training Performance" />
+        <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+            Fig 17. Training Performance Comparison between PPO and DDPG
+        </figcaption>
+    </figure>
+</section>
+
+<!-- ppo comparison with nominal and noise sensor observation -->
+<section>
+    <figure style="margin: 0;">
+        <h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+            PPO: Nominal vs Noisy Sensor Observations
+        </h3>
+        <img src="assets/ppo_vs_noise.png" width="70%" alt="PPO Nominal vs Noisy Sensors" />
+        <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+            Fig 18. PPO Performance with Nominal and Noisy Sensor Observations
+        </figcaption>
+    </figure>
+</section>
+
+<!-- Incremental Policy Refinement -->
+<section>
+    <figure style="margin: 0;">
+        <h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+            Incremental Policy Refinement
+        </h3>
+        <img src="assets/retraining_ppo_reward.png" width="70%" alt="Incremental Policy Refinement" />
+        <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+            Fig 19. Performance Improvement through Incremental Policy Refinement
+        </figcaption>
+    </figure>
+</section>
+
+<!-- Sim2Sim Transfer Results -->
+<section>
+    <figure style="margin: 0;">
+        <h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+            Evaluation Metrics
+        </h3>
+        <img src="assets/sim2sim_transfer_results.png" width="70%" alt="Sim2Sim Transfer Results" />
+        <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+            Fig 20. Evaluation Metrics for Sim-to-Sim Transfer
+        </figcaption>
+    </figure>
+    <figure style="margin: 0;">
+        <!-- <h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+            Sim2Real Transfer Results
+        </h3> -->
+        <img src="assets/sim2real_transfer_results.png" width="70%" alt="Sim2Real Transfer Results" />
+        <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+            Fig 21. Evaluation Metrics for Sim-to-Real Transfer
+        </figcaption>
+    </figure>
+</section>
+
+<section>
+    <h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">Demo of Multi TB3 Robots</h3>
+    <!--- add mp4 -->
+    <video width="70%" controls autoplay muted loop playbackRate="2.0">
+        <source src="assets/multi_tb3_real.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <script>
+        document.querySelector('video').playbackRate = 2.0;
+    </script>
+</section>

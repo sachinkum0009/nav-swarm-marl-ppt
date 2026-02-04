@@ -2,4 +2,299 @@
     <h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
         Methodology
     </h3>
+    <!-- <ol>
+        <li style="margin-bottom: 12px;">Reward, State and Action Space</li>
+        <li style="margin-bottom: 12px;">System Architecture for Training and Inference</li>
+        <li style="margin-bottom: 12px;">Domain Randomization for Sim2Real transfer</li>
+        <li style="margin-bottom: 12px;">CTADE - Centralized Task Allocation and Decentralized Execution</li>
+    </ol> -->
+</section>
+
+<!-- State and Action Space -->
+<section>
+    <h3 style="color: black; font-variant: normal; letter-spacing:
+        0.05em; text-transform: none; font-weight: 600; font-size: 1.3em;">
+        Reward, State and Action Space
+    </h3>
+    <div style="display: flex; align-items: center; gap: 20px;">
+        <ul style="list-style: disc; padding-left: 20px; line-height: 1.3; font-size: 0.65em; margin: 10px 0; flex: 1;">
+            <li style="margin-bottom: 4px;">State Space:
+                <ul style="list-style: circle; padding-left: 20px; margin-top: 5px;">
+                    <li>Lidar readings (180-degree scan)</li>
+                    <li>Relative position of the goal</li>
+                </ul>
+            </li>
+            <li style="margin-bottom: 4px;">Action Space:
+                <ul style="list-style: circle; padding-left: 20px; margin-top: 5px;">
+                    <li>Linear velocity (forward/backward)</li>
+                    <li>Angular velocity (left/right turn)</li>
+                </ul>
+            </li>
+            <li style="margin-bottom: 4px;">Reward Structure:
+                <ul style="list-style: circle; padding-left: 20px; margin-top: 5px;">
+                    <li>Positive reward for reaching the goal</li>
+                    <li>Negative reward for collisions</li>
+                </ul>
+            </li>
+        </ul>
+        <div style="flex: 1; text-align: center;">
+            <img src="assets/turtlebot3_annotated.jpeg" width="80%" alt="Sim2Real Transfer" />
+            <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:10px;">
+                Fig 6. TurtleBot3 Robot <a href="https://www.robotis.us/turtlebot-3/"
+                    style="color:#667eea; text-decoration:none;">[3]</a>
+            </figcaption>
+        </div>
+    </div>
+</section>
+
+<!-- PPO vs DDPG -->
+<section>
+    <h3 style="color: black; font-variant: normal; letter-spacing:
+        0.05em; text-transform: none; font-weight: 600; font-size: 1.3em;">
+        PPO vs DDPG Algorithm Selection
+    </h3>
+    <div style="display: flex; align-items: center; gap: 20px;">
+        <ul style="list-style: disc; padding-left: 20px; line-height: 1.3; font-size: 0.52em; margin: 10px 0; flex: 1;">
+            <li style="margin-bottom: 4px;">Proximal Policy Optimization (PPO):
+            <ul style="list-style: circle; padding-left: 20px; margin-top: 5px;">
+                <li>Stable and efficient policy gradient method</li>
+                <li>Clipped objective to prevent large policy updates</li>
+            </ul>
+            </li>
+            <li style="margin-bottom: 4px;">Deep Deterministic Policy Gradient (DDPG):
+            <ul style="list-style: circle; padding-left: 20px; margin-top: 5px;">
+                <li>Actor-Critic method for continuous action spaces</li>
+                <li>Uses experience replay and target networks</li>
+            </ul>
+            </li>
+        </ul>
+        <div style="flex: 1; text-align: center;">
+            <img src="assets/ppo_cliff.png" width="70%" alt="PPO Cliff" />
+            <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:10px;">
+                Fig 7. PPO clipping taking small steps to update Policy <a href="#/ref-schulmanetal2017"
+                    style="color:#667eea; text-decoration:none;">[4]</a>
+            </figcaption>
+        </div>
+    </div>
+</section>
+
+<!-- System Architecture for Training -->
+<section>
+    <h3 style="color: black; font-variant: normal; letter-spacing:
+        0.05em; text-transform: none; font-weight: 600; font-size: 1.3em;">
+        System Architecture for Training of RL Model
+    </h3>
+    <img src="assets/rl_agent_sys_arch-Page-1.png" width="40%" alt="System Architecture for Training of RL Model" />
+    <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+        Fig 8. System Architecture Overview for Training of RL Model
+    </figcaption>
+</section>
+
+<!-- System Architecture for Inference -->
+<section>
+    <h3 style="color: black; font-variant: normal; letter-spacing:
+        0.05em; text-transform: none; font-weight: 600; font-size: 1.3em;">
+        System Architecture for Inference of RL Model
+    </h3>
+    <div style="display: flex; align-items: center; gap: 20px;">
+        <div style="flex: 1.5; text-align: center;">
+            <img src="assets/rl_agent_sys_arch-Page-2.png" width="100%" alt="System Architecture for Inference of RL Model" />
+            <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+                Fig 9. System Architecture Overview for Inference of RL Model
+            </figcaption>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <img src="assets/scenario_yaml.png" width="50%" alt="Scenario Configuration YAML" />
+            <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+                Fig 10. Scenario Configuration YAML for Training Environment
+            </figcaption>
+        </div>
+    </div>
+</section>
+
+<!-- Reinforcement Learning Methodology -->
+<!-- <section>
+    <h3 style="color: black; font-variant: normal; letter-spacing:
+        0.05em; text-transform: none; font-weight: 600; font-size: 1.3em;">
+        Reinforcement Learning Methodology
+    </h3>
+    <ul style="list-style: disc; padding-left: 20px; line-height: 1.3; font-size: 0.65em; margin: 10px 0;">
+        <li style="margin-bottom: 4px;">Environment: OpenAI Gym with custom multi-agent swarm navigation scenario</li>
+        <li style="margin-bottom: 4px;">Algorithm: Proximal Policy Optimization (PPO)</li>
+        <li style="margin-bottom: 4px;">Framework: Stable Baselines3</li>
+        <li style="margin-bottom: 4px;">State Representation: Lidar sensor data, relative positions of neighboring agents, and goal location</li>
+        <li style="margin-bottom: 4px;">Action Space: Continuous velocity commands (linear and angular velocities)</li>
+        <li style="margin-bottom: 4px;">Reward Structure: Sparse rewards for reaching the goal, penalties for collisions and time taken</li>
+        <li style="margin-bottom: 4px;">Training Procedure: Curriculum learning with increasing difficulty levels</li>
+    </ul>
+</section> -->
+
+<!-- Domain Randomization -->
+
+<section>
+    <h3 style="color: black; font-variant: normal; letter-spacing:
+        0.05em; text-transform: none; font-weight: 600; font-size: 1.3em;">
+        Domain Randomization for Sim2Real Transfer
+    </h3>
+    <div style="display: flex; align-items: center; gap: 20px;">
+        <ul style="list-style: disc; padding-left: 20px; line-height: 1.3; font-size: 0.65em; margin: 10px 0; flex: 1;">
+            <li style="margin-bottom: 4px;">Randomizing robot dynamics:
+                <ul style="list-style: circle; padding-left: 20px; margin-top: 5px;">
+                    <li>Mass variations</li>
+                    <li>Friction coefficients</li>
+                </ul>
+            </li>
+            <li style="margin-bottom: 4px;">Sensor noise simulation:
+                <ul style="list-style: circle; padding-left: 20px; margin-top: 5px;">
+                    <li>Lidar noise models</li>
+                    <li>Odometry drift</li>
+                </ul>
+            </li>
+            <li style="margin-bottom: 4px;">Environmental changes:
+                <ul style="list-style: circle; padding-left: 20px; margin-top: 5px;">
+                    <li>Distinguishable Environments</li>
+                    <li>Different waypoints</li>
+                </ul>
+            </li>
+        </ul>
+        <div style="flex: 1; text-align: center;">
+            <img src="assets/Inference_of_rl_model-Page-1.drawio.png" width="90%"
+                alt="Inference of RL Model in Real World" />
+            <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+                Fig 11. Inference of RL Model
+            </figcaption>
+        </div>
+    </div>
+</section>
+
+<!-- CTDE - Centralized Training Decentralized Execution -->
+<section>
+    <h3 style="color: black; font-variant: normal; letter-spacing:
+        0.05em; text-transform: none; font-weight: 600; font-size: 1.3em;">
+        CTDE - Centralized Task Allocation Decentralized Execution
+    </h3>
+    <div style="display: flex; align-items: center; gap: 20px;">
+        <div style="flex: 1;">
+            <ul style="list-style: disc; padding-left: 20px; line-height: 1.3; font-size: 0.45em; margin: 10px 0;">
+                <li style="margin-bottom: 4px;">Centralized Task Allocation:
+                    <ul style="list-style: circle; padding-left: 20px; margin-top: 5px;">
+                        <li>Allocation of tasks to agents based on global information</li>
+                        <li>Facilitates coordinated behavior among agents</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 4px;">Decentralized Execution:
+                    <ul style="list-style: circle; padding-left: 20px; margin-top: 5px;">
+                        <li>Each agent acts based on local observations</li>
+                        <li>Policies conditioned on individual agent's perspective</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <img src="assets/rl_agent_sys_arch-Page-2.png" width="100%" alt="CTDE - Centralized Training Decentralized Execution" />
+            <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:10px;">
+                Fig 12. CTDE Framework <a href="#/ref-foersteretal2018"
+                    style="color:#667eea; text-decoration:none;">[2]</a>
+            </figcaption>
+        </div>
+    </div>
+</section>
+
+<!-- Evaluation Metrics -->
+<section>
+    <h3
+        style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+        Evaluation Metrics
+    </h3>
+    <table style="width: 90%; margin: 20px auto; border-collapse: collapse; font-size: 0.6em;">
+        <thead>
+            <tr style="background-color: #667eea; color: white;">
+                <th style="border: 1px solid #ddd; padding: 12px; text-align: center;">Scenario</th>
+                <th style="border: 1px solid #ddd; padding: 12px; text-align: center;">Target Coordinates</th>
+                <th style="border: 1px solid #ddd; padding: 12px; text-align: center;">Objectives Achieved</th>
+                <th style="border: 1px solid #ddd; padding: 12px; text-align: center;">Total Objectives</th>
+                <th style="border: 1px solid #ddd; padding: 12px; text-align: center;">Temporal Delay (s)</th>
+                <th style="border: 1px solid #ddd; padding: 12px; text-align: center;">Distance Traversed (m)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: center; background-color: #f9f9f9;">Scenario 1</td>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">[2, -2], [2, 0]</td>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">1</td>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">2</td>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">0.5</td>
+                <td style="border: 1px solid #ddd; padding: 10px; text-align: center;">[2.9753, 1.7359]</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<!-- Inference of RL Model -->
+<section>
+    <figure style="margin: 0;">
+        <h3
+            style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+            Inference of RL Model
+        </h3>
+        <img src="assets/Inference_of_rl_model-Page-2.drawio.png" width="70%"
+            alt="Inference of RL Model in Real World" />
+        <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+            Fig 13. Inference of RL Model
+        </figcaption>
+    </figure>
+</section>
+
+
+<!-- PID Controller as smoother velocity generator -->
+<section>
+    <figure style="margin: 0;">
+        <h3
+            style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+            PID Controller as Velocity Smoother
+        </h3>
+        <img src="assets/pid_controller_vel_smoother.png" width="70%"
+            alt="PID Controller as Velocity Smoother" />
+        <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+            Fig 14. PID Controller as Velocity Smoother
+        </figcaption>
+    </figure>
+</section>
+
+<!-- Turtlebot3 ROS2 -->
+<section>
+    <figure style="margin: 0;">
+        <h3
+            style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+            TurtleBot3 ROS2 Platform
+        </h3>
+        <img src="assets/turtlebot3_annotated.jpeg" width="60%" alt="TurtleBot3 ROS2 Platform" />
+        <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+            Fig 15. TurtleBot3 Annotated Sensors<a href="https://www.robotis.us/turtlebot-3-ros-2/"
+                style="color:#667eea; text-decoration:none;">[1]</a>
+        </figcaption>
+    </figure>
+</section>
+
+<!-- Real World Scenario -->
+ <section>
+    <h3
+        style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+        Real World Scenario
+    </h3>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 40px;">
+        <div style="flex: 1;">
+            <ol style="font-size: x-large; margin: 0;">
+                <li>Indoor environment with static obstacles</li>
+                <li>Multiple TurtleBot3 robots</li>
+            </ol>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <img src="assets/lidar1.png" width="80%" alt="Real World Scenario" />
+            <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:10px;">
+                Fig 16. Real World Scenario with TurtleBot3 Robots
+            </figcaption>
+        </div>
+    </div>
 </section>
