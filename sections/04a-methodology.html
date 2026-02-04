@@ -41,7 +41,7 @@
             <img src="assets/turtlebot3_annotated.jpeg" width="80%" alt="Sim2Real Transfer" />
             <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:10px;">
                 Fig 6. TurtleBot3 Robot <a href="https://www.robotis.us/turtlebot-3/"
-                    style="color:#667eea; text-decoration:none;">[3]</a>
+                    style="color:#667eea; text-decoration:none;"></a>
             </figcaption>
         </div>
     </div>
@@ -64,7 +64,7 @@
             <li style="margin-bottom: 4px;">Deep Deterministic Policy Gradient (DDPG):
             <ul style="list-style: circle; padding-left: 20px; margin-top: 5px;">
                 <li>Actor-Critic method for continuous action spaces</li>
-                <li>Uses experience replay and target networks</li>
+                <li>Uses experience replay buffer</li>
             </ul>
             </li>
         </ul>
@@ -89,45 +89,6 @@
         Fig 8. System Architecture Overview for Training of RL Model
     </figcaption>
 </section>
-
-<!-- System Architecture for Inference -->
-<section>
-    <h3 style="color: black; font-variant: normal; letter-spacing:
-        0.05em; text-transform: none; font-weight: 600; font-size: 1.3em;">
-        System Architecture for Inference of RL Model
-    </h3>
-    <div style="display: flex; align-items: center; gap: 20px;">
-        <div style="flex: 1.5; text-align: center;">
-            <img src="assets/rl_agent_sys_arch-Page-2.png" width="100%" alt="System Architecture for Inference of RL Model" />
-            <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
-                Fig 9. System Architecture Overview for Inference of RL Model
-            </figcaption>
-        </div>
-        <div style="flex: 1; text-align: center;">
-            <img src="assets/scenario_yaml.png" width="50%" alt="Scenario Configuration YAML" />
-            <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
-                Fig 10. Scenario Configuration YAML for Training Environment
-            </figcaption>
-        </div>
-    </div>
-</section>
-
-<!-- Reinforcement Learning Methodology -->
-<!-- <section>
-    <h3 style="color: black; font-variant: normal; letter-spacing:
-        0.05em; text-transform: none; font-weight: 600; font-size: 1.3em;">
-        Reinforcement Learning Methodology
-    </h3>
-    <ul style="list-style: disc; padding-left: 20px; line-height: 1.3; font-size: 0.65em; margin: 10px 0;">
-        <li style="margin-bottom: 4px;">Environment: OpenAI Gym with custom multi-agent swarm navigation scenario</li>
-        <li style="margin-bottom: 4px;">Algorithm: Proximal Policy Optimization (PPO)</li>
-        <li style="margin-bottom: 4px;">Framework: Stable Baselines3</li>
-        <li style="margin-bottom: 4px;">State Representation: Lidar sensor data, relative positions of neighboring agents, and goal location</li>
-        <li style="margin-bottom: 4px;">Action Space: Continuous velocity commands (linear and angular velocities)</li>
-        <li style="margin-bottom: 4px;">Reward Structure: Sparse rewards for reaching the goal, penalties for collisions and time taken</li>
-        <li style="margin-bottom: 4px;">Training Procedure: Curriculum learning with increasing difficulty levels</li>
-    </ul>
-</section> -->
 
 <!-- Domain Randomization -->
 
@@ -167,6 +128,75 @@
     </div>
 </section>
 
+<!-- Demo of Single TB3 Trainign-->
+<section>
+    <h3 style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">Demo of Single TB3 Training</h3>
+    <!--- add mp4 -->
+    <video width="80%" controls autoplay muted loop playbackRate="2.0">
+        <source src="assets/bit_lab_rl.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <script>
+        document.querySelector('video').playbackRate = 2.0;
+    </script>
+</section>
+
+<!-- System Architecture for Inference -->
+<section>
+    <h3 style="color: black; font-variant: normal; letter-spacing:
+        0.05em; text-transform: none; font-weight: 600; font-size: 1.3em;">
+        System Architecture for Inference of RL Model
+    </h3>
+    <div style="display: flex; align-items: center; gap: 20px;">
+        <div style="flex: 1.5; text-align: center;">
+            <img src="assets/rl_agent_sys_arch-Page-2.png" width="100%" alt="System Architecture for Inference of RL Model" />
+            <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+                Fig 9. System Architecture Overview for Inference of RL Model
+            </figcaption>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <img src="assets/scenario_yaml.png" width="50%" alt="Scenario Configuration YAML" />
+            <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+                Fig 10. Scenario Configuration YAML for Training Environment
+            </figcaption>
+        </div>
+    </div>
+</section>
+
+<!-- Inference of RL Model -->
+<section>
+    <figure style="margin: 0;">
+        <h3
+            style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
+            Inference of RL Model
+        </h3>
+        <img src="assets/Inference_of_rl_model-Page-2.drawio.png" width="70%"
+            alt="Inference of RL Model in Real World" />
+        <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
+            Fig 13. Inference of RL Model
+        </figcaption>
+    </figure>
+</section>
+
+<!-- Reinforcement Learning Methodology -->
+<!-- <section>
+    <h3 style="color: black; font-variant: normal; letter-spacing:
+        0.05em; text-transform: none; font-weight: 600; font-size: 1.3em;">
+        Reinforcement Learning Methodology
+    </h3>
+    <ul style="list-style: disc; padding-left: 20px; line-height: 1.3; font-size: 0.65em; margin: 10px 0;">
+        <li style="margin-bottom: 4px;">Environment: OpenAI Gym with custom multi-agent swarm navigation scenario</li>
+        <li style="margin-bottom: 4px;">Algorithm: Proximal Policy Optimization (PPO)</li>
+        <li style="margin-bottom: 4px;">Framework: Stable Baselines3</li>
+        <li style="margin-bottom: 4px;">State Representation: Lidar sensor data, relative positions of neighboring agents, and goal location</li>
+        <li style="margin-bottom: 4px;">Action Space: Continuous velocity commands (linear and angular velocities)</li>
+        <li style="margin-bottom: 4px;">Reward Structure: Sparse rewards for reaching the goal, penalties for collisions and time taken</li>
+        <li style="margin-bottom: 4px;">Training Procedure: Curriculum learning with increasing difficulty levels</li>
+    </ul>
+</section> -->
+
+
+
 <!-- CTDE - Centralized Training Decentralized Execution -->
 <section>
     <h3 style="color: black; font-variant: normal; letter-spacing:
@@ -194,7 +224,7 @@
             <img src="assets/rl_agent_sys_arch-Page-2.png" width="100%" alt="CTDE - Centralized Training Decentralized Execution" />
             <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:10px;">
                 Fig 12. CTDE Framework <a href="#/ref-foersteretal2018"
-                    style="color:#667eea; text-decoration:none;">[2]</a>
+                    style="color:#667eea; text-decoration:none;"></a>
             </figcaption>
         </div>
     </div>
@@ -231,20 +261,6 @@
 </section>
 
 
-<!-- Inference of RL Model -->
-<section>
-    <figure style="margin: 0;">
-        <h3
-            style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
-            Inference of RL Model
-        </h3>
-        <img src="assets/Inference_of_rl_model-Page-2.drawio.png" width="70%"
-            alt="Inference of RL Model in Real World" />
-        <figcaption style="text-align:center; font-size:0.5em; color:#333; margin-top:1px;">
-            Fig 13. Inference of RL Model
-        </figcaption>
-    </figure>
-</section>
 
 
 <!-- PID Controller as smoother velocity generator -->
@@ -263,7 +279,7 @@
 </section>
 
 <!-- Turtlebot3 ROS2 -->
-<section>
+<!-- <section>
     <figure style="margin: 0;">
         <h3
             style="color: black; font-variant: normal; letter-spacing: 0.05em; text-transform: none; font-weight: 600;">
@@ -275,7 +291,7 @@
                 style="color:#667eea; text-decoration:none;">[1]</a>
         </figcaption>
     </figure>
-</section>
+</section> -->
 
 <!-- Real World Scenario -->
  <section>
